@@ -4,6 +4,8 @@
     margin: 0px;
     scroll-behavior: smooth;
     --grandient: radial-gradient(circle, rgb(31 33 32) 0%, rgb(26 36 38) 0%, rgb(12 13 15) 87%);
+    --gray: rgb(41, 41, 41);
+    --darkgray: rgb(31, 31, 31);
 }
 
 
@@ -75,15 +77,14 @@
 /*Navbar*/
 
 .navbar {
-    background: rgb(124, 36, 206);
+    background: rgb(24, 24, 24);
     height: 70px;
     display: none;
 }
 
 .navbar-container {
     position: relative;
-    display: flex;
-    justify-content: flex-end;
+    float: right;
     height: 100%;
 }
 
@@ -93,16 +94,16 @@
 }
 
 .navbar-container__li {
+    list-style: none;
     display: inline-block;
-    background-color: rgb(124, 36, 206);
+    background-color: rgb(30, 29, 31);
     height: 70px;
     width: 150px;
-    border: none;
     font-size: 2em;
 }
 
 .navbar-container__li a {
-    color: #000;
+    color: #FFF;
     text-decoration: none;
     display: inline-block;
     width: 100%;
@@ -113,7 +114,7 @@
 }
 
 .navbar-container__li:hover>a {
-    background: rgb(104, 29, 175);
+    background: rgb(10, 10, 10);
 }
 
 
@@ -128,6 +129,8 @@
 
 .section-About-Me {
     user-select: none;
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 10%;
     margin: 0 10%;
     border-bottom: 2px solid #000;
@@ -136,12 +139,19 @@
 
 .section-About-Me h1 {
     padding-top: 10%;
-    font-size: 4em;
+    font-size: 5em;
+    width: 100%;
 }
 
 .section-About-Me p {
     margin-top: 5%;
-    font-size: 1.5em;
+    width: 100%;
+    font-size: 2em;
+}
+
+.section-About-Me img {
+    margin-top: 15%;
+    padding: 5%;
 }
 
 
@@ -255,8 +265,7 @@
 }
 
 .section-skill__logos:hover {
-    filter: none;
-    filter: drop-shadow(5px 5px 10px #000);
+    filter: contrast(0) brightness(100) drop-shadow(5px 5px 10px #fff);
 }
 
 
@@ -264,60 +273,96 @@
 
 .side-menu {
     position: sticky;
+    height: 0;
     top: 0;
-    animation: sidebar;
-    display: none;
+    z-index: 10;
 }
 
-.side-menu__container {
-    height: 100vh;
-    display: grid;
-    grid-template-areas: "menu menu button" "menu menu blank""menu menu blank" "menu menu blank" "menu menu blank" "menu menu blank" "menu menu blank";
-    background: transparent;
-    transform: translateX(-80vw);
-    animation: sidebar;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+.side-menu__btn-show {
+    margin-top: 10px;
+    position: sticky;
+    float: right;
+    background: var(--gray);
+    border-radius: 50%;
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    line-height: 1.5;
+    opacity: .7;
+    text-size-adjust: 100%;
 }
 
 .side-menu__ul {
-    display: grid;
-    grid-template-rows: 80px 100px 100px 100px 100px;
-    grid-area: menu;
-    row-gap: 20px;
-    background: blueviolet;
-}
-
-.side-menu__button {
-    grid-area: button;
-    width: 20vw;
-    height: 100px;
-    background: blueviolet;
-    border: none;
-    font-size: 2.2em;
-    border: 10px blueviolet outset;
-    padding-top: 5px;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%);
+    background-color: var(--darkgray);
 }
 
 .side-menu__li {
-    height: 100%;
-    width: 80vw;
-    background-color: rgb(116, 25, 201);
+    width: 100%;
+    background-color: var(--gray);
+    height: 15vh;
     text-align: center;
-    line-height: 2.5;
+}
+
+.side-button {
+    background-color: var(--gray);
+    width: 100%;
+    height: 10vh;
+}
+
+.side-menu__btn-hide {
+    color: #FFF;
+    background: var(--gray);
+    font-size: 3em;
+    height: 100%;
+    width: 20vw;
+    margin-left: 80vw;
+    margin-right: -50px;
+    line-height: 1.5;
+    text-size-adjust: 100%;
 }
 
 .side-menu__li a {
-    color: #000;
-    font-size: 2.5em;
-    font-weight: 900;
+    color: #FFF;
+    font-size: 4em;
     text-decoration: none;
+    line-height: 1.6;
 }
 
-@keyframes sidebar {
+.side-menu__li:last-child {
+    position: absolute;
+    bottom: 0;
+}
+
+.show {
+    animation: show 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.hide {
+    animation: hide 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.hidden {
+    z-index: -1;
+}
+
+@keyframes show {
     0% {}
     100% {
-        transform: translateX(-80vw);
+        transform: translateX(0);
+    }
+}
+
+@keyframes hide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
 
@@ -334,9 +379,26 @@
 }
 
 @media only screen and (min-width: 900px) {
+    /**Side-menu */
+    .side-menu {
+        display: none;
+    }
+    /**NavBar */
+    .navbar {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
     /**Section-AboutMe */
     .section-About-Me {
         margin: 0 7%;
+        display: block;
+    }
+    .section-About-Me img {
+        padding: 1%;
+        width: 35%;
+        float: right;
     }
     /**Section-skill */
     .section-skill {

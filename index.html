@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b0ff320dda.js" crossorigin="anonymous"></script>
-    <script src="JS/Scripts.js"></script>
 
 </head>
 
@@ -32,39 +31,47 @@
 
         </div>
     </header>
+    <!-- Aside -->
     <aside class="side-menu">
+        <button id="btn-show" class="side-menu__btn-show"><i class="fa-solid fa-bars"></i></button>
         <div class="side-menu__container">
-            <ul class="side-menu__ul">
-                <div></div>
-                <li class="side-menu__li"><a href="#About-Me">About Me</a></li>
-                <li class="side-menu__li"><a href="#">Proyectos</a></li>
-                <li class="side-menu__li"><a href="#">Herramientas</a></li>
-                <li class="side-menu__li"><a href="#">Contacto</a></li>
+            <ul class="side-menu__ul hide">
+                <div class="side-button">
+                    <button id="btn-hide" class="side-menu__btn-hide"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <li class="side-menu__li"><a onclick="closeMenu()" href="#About-Me">About Me</a></li>
+                <li class="side-menu__li"><a onclick="closeMenu()" href="#Projects">Proyectos</a></li>
+                <li class="side-menu__li"><a onclick="closeMenu()" href="#Skills">Habilidades</a></li>
+                <li class="side-menu__li"><a onclick="closeMenu()" href="#Contact">Contacto</a></li>
+                <li class="side-menu__li"><a onclick="closeMenu()" href="#">Volver Arriba</a></li>
             </ul>
-            <button class="side-menu__button"><i class="fa-solid fa-bars"></i></button>
+
         </div>
     </aside>
+    <!--  NavBar    -->
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-container__menu">
                 <ul class="navbar-container__ul">
                     <li class="navbar-container__li"><a href="#About-Me">About Me</a></li>
-                    <li class="navbar-container__li"><a href="#">Proyectos</a></li>
-                    <li class="navbar-container__li"><a href="#">Herramientas</a></li>
-                    <li class="navbar-container__li"><a href="#">Contacto</a></li>
+                    <li class="navbar-container__li"><a href="#Projects">Proyectos</a></li>
+                    <li class="navbar-container__li"><a href="#Skills">Herramientas</a></li>
+                    <li class="navbar-container__li"><a href="#Contact">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="body-container">
         <article id="About-Me" class="section-About-Me">
+            <img src="./Img/Me.png" alt="MyPicture">
             <h1>Hola hola</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore totam, doloremque molestiae ullam mollitia provident quo quam autem quas minima animi libero cum voluptas ut fugit et aliquam excepturi numquam. Lorem, ipsum dolor sit amet
                 consectetur adipisicing elit. Non fugiat provident omnis nesciunt quam. Quo, reiciendis at! Eligendi, labore placeat. Tempora animi numquam a, sequi praesentium deserunt ipsam officia id. Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Quasi inventore fugiat consequuntur ea molestiae eligendi minima, praesentium repellendus accusantium pariatur placeat libero labore? Eius tempora esse hic minima voluptatibus.
             </p>
         </article>
-        <article id="Projects" class="section-projects">
+        <div id="Projects"></div>
+        <article class="section-projects">
             <div class="section-projects__galery ">
                 <div class="section-projects__description">
                     <div class="section-projects__text">
@@ -110,6 +117,7 @@
             <a href="https://www.pexels.com/video/digital-projection-of-abstract-geometrical-lines-3129671/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Header Videonby Pexels</a>
         </footer>
     </div>
+    <script src="JS/Scripts.js"></script>
 </body>
 
 </html>
