@@ -1,10 +1,12 @@
+"use-strict";
+
 let sliderIndex = 0;
 
 const showSlide = (index) => {
     const slides = document.querySelectorAll('.slide');
     let dots = document.querySelectorAll('.dot-nav');
 
-    if (index >= slides.length - 1) {
+    if (index > slides.length - 1) {
         sliderIndex = 0;
     }
     if (index < 0) {
@@ -28,5 +30,3 @@ document.querySelectorAll(".dot-nav").forEach((dot) => {
 });
 
 showSlide(sliderIndex);
-
-setInterval(() => showSlide(sliderIndex++), 3000);

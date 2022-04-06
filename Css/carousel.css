@@ -24,13 +24,12 @@
 
 #dots-wrapper {
     display: flex;
-    bottom: 30px;
 }
 
 .dot-nav {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     border-radius: 100%;
     cursor: pointer;
     margin: 0 8px;
@@ -50,6 +49,14 @@
     animation-duration: 1s;
 }
 
+.buttons-slider {
+    float: right;
+}
+
+.slider-btn {
+    width: 30px;
+}
+
 @keyframes fade {
     from {
         opacity: 0;
@@ -58,3 +65,5 @@
         opacity: 1;
     }
 }
+
+@media only screen and (max-width: 900px) {}
