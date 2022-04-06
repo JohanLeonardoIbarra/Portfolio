@@ -1,39 +1,10 @@
-"use strict";
-
-const btnHide = document.getElementById('btn-hide');
-const btnShow = document.getElementById('btn-show');
-
-const SideBar = document.querySelector(".side-menu__ul");
-
-const closeMenu = () => {
-    SideBar.classList.remove('show');
-    SideBar.classList.add('hide');
-    btnShow.classList.remove('hidden');
-}
-
-const openMenu = () => {
-    btnShow.classList.add('hidden');
-    SideBar.classList.add('show');
-    SideBar.classList.remove('hide');
-}
-
-btnShow.addEventListener('click', () => {
-    openMenu();
-});
-
-btnHide.addEventListener('click', () => {
-    closeMenu();
-});
-
-//Carousel
-
 let sliderIndex = 0;
 
 const showSlide = (index) => {
     const slides = document.querySelectorAll('.slide');
     let dots = document.querySelectorAll('.dot-nav');
 
-    if (index > slides.length - 1) {
+    if (index >= slides.length - 1) {
         sliderIndex = 0;
     }
     if (index < 0) {
@@ -57,3 +28,5 @@ document.querySelectorAll(".dot-nav").forEach((dot) => {
 });
 
 showSlide(sliderIndex);
+
+setInterval(() => showSlide(sliderIndex++), 3000);

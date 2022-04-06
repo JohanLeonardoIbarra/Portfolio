@@ -44,3 +44,17 @@
 .active-dot {
     background-color: #d6d6d6;
 }
+
+.fade {
+    animation: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
