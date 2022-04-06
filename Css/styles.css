@@ -161,7 +161,7 @@
     margin-bottom: 5%;
 }
 
-.section-projects__galery {
+.section-projects__gallery {
     display: flex;
     height: 100%;
     margin: 5%;
@@ -415,7 +415,7 @@
         margin: 15px;
     }
     /**Section-projects */
-    .section-projects__galery {
+    .section-projects__gallery {
         flex-direction: row-reverse;
     }
     .section-projects__description {
