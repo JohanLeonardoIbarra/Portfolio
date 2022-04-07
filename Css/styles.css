@@ -379,6 +379,15 @@
 }
 
 
+/** footer */
+
+.footer {
+    width: 100%;
+    background: var(--grandient);
+    padding: 20px;
+}
+
+
 /** Prefabs */
 
 
@@ -412,6 +421,11 @@
         position: sticky;
         top: 0;
         z-index: 10;
+    }
+    /**Section-AboutMe */
+    .pic-container {
+        width: 30vw;
+        height: 30vw;
     }
     /**Section-skill */
     .section-skill {
