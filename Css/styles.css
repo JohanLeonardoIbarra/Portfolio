@@ -127,6 +127,23 @@
 
 /*About Me*/
 
+.pic-container {
+    width: 80vw;
+    height: 80vw;
+    margin: 10vh 0 0 0;
+    border-radius: 50%;
+    border: #000 solid 5px;
+    box-sizing: border-box;
+}
+
+.pic-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
 .section-About-Me {
     user-select: none;
     display: flex;
@@ -147,11 +164,6 @@
     margin-top: 5%;
     width: 100%;
     font-size: 2em;
-}
-
-.section-About-Me img {
-    margin-top: 15%;
-    padding: 5%;
 }
 
 
@@ -376,6 +388,17 @@
     .project-buttons {
         justify-content: end;
     }
+    /**Section-AboutMe */
+    .section-About-Me {
+        margin: 0 7%;
+        display: block;
+    }
+    .pic-container {
+        margin: 15vh 10px 0 10px;
+        width: 35vw;
+        height: 35vw;
+        float: right;
+    }
 }
 
 @media only screen and (min-width: 900px) {
@@ -389,16 +412,6 @@
         position: sticky;
         top: 0;
         z-index: 10;
-    }
-    /**Section-AboutMe */
-    .section-About-Me {
-        margin: 0 7%;
-        display: block;
-    }
-    .section-About-Me img {
-        padding: 1%;
-        width: 35%;
-        float: right;
     }
     /**Section-skill */
     .section-skill {
