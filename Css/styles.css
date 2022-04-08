@@ -4,7 +4,7 @@
     margin: 0px;
     user-select: none;
     scroll-behavior: smooth;
-    --grandient: radial-gradient(circle, rgb(31 33 32) 0%, rgb(42, 47, 48) 0%, rgb(12 13 15) 87%);
+    --grandient: radial-gradient(circle, rgb(29, 31, 30) 0%, rgb(50, 51, 51) 0%, rgb(12 13 15) 87%);
     --black50: #00000050;
     --purple: #622768;
 }
