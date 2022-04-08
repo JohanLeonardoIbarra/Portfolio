@@ -155,7 +155,6 @@ body {
     flex-wrap: wrap;
     padding-bottom: 10%;
     margin: 0 10%;
-    border-bottom: 2px solid #000;
     text-align: justify;
 }
 
@@ -176,6 +175,14 @@ body {
 
 .section-projects {
     margin-bottom: 5%;
+}
+
+#projects-title {
+    padding-left: 5%;
+    font-size: 3.5em;
+    width: 100%;
+    color: #FFF;
+    background: var(--grandient);
 }
 
 .section-projects__gallery {
