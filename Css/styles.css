@@ -203,6 +203,7 @@ body {
 
 .section-projects__description h1 {
     font-size: 3.5em;
+    margin-bottom: 20px;
 }
 
 .section-projects__description p {
@@ -247,6 +248,10 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.inactive {
+    filter: brightness(.3) !important;
 }
 
 
