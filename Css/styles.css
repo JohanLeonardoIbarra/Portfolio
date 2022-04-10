@@ -213,8 +213,7 @@ body {
 
 .section-projects__description a {
     margin-top: 20px;
-    width: 100px;
-    border-radius: 50%;
+    width: 60px;
     background: var(--grandient);
 }
 
@@ -236,9 +235,9 @@ body {
 }
 
 .project-buttons {
-    margin: 0 10%;
+    margin: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
 }
 
 .section-projects__picture {
@@ -472,9 +471,6 @@ body {
 /** Responsive */
 
 @media only screen and (min-width: 500px) {
-    .project-buttons {
-        justify-content: end;
-    }
     /**Section-AboutMe */
     .section-About-Me {
         margin: 0 7%;
@@ -545,6 +541,7 @@ body {
     .section-projects__description a {
         height: 100px;
         width: 100px;
+        border-radius: 50%;
     }
     .section-projects__picture {
         padding: 20px;
