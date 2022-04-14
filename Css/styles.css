@@ -470,6 +470,7 @@ body {
 .footer-section ul {
     margin: 5% 0;
     list-style: none;
+    text-align: center;
 }
 
 #Social ul {
