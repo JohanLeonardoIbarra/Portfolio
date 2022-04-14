@@ -9,6 +9,21 @@
 }
 
 
+/** Scroll Bar */
+
+body::-webkit-scrollbar {
+    background-color: #1f1e1f;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FFf;
+    border-radius: 5px;
+    border: #1f1e1f solid 1px;
+    box-sizing: border-box;
+}
+
+
 /*Header*/
 
 body {
@@ -23,11 +38,12 @@ body {
 }
 
 .home-header video {
+    position: fixed;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
     width: 100%;
     height: 110%;
-    z-index: -1;
+    z-index: -10;
 }
 
 .home-header__name {
@@ -37,7 +53,8 @@ body {
     margin-top: 10vh;
     color: #FFF;
     padding-left: 5vw;
-    z-index: 1;
+    position: fixed;
+    z-index: -5;
 }
 
 .home-header__name-h1 {
